@@ -1,0 +1,8 @@
+glob
+numpy
+rasterio
+pickle
+opencv-python
+pathos
+mxnet
+
