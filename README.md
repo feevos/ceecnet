@@ -49,10 +49,12 @@ or additional features available to CSIRO or the public in connection with your 
 ### CITATION
 If you find the contents of this repository useful for your research, please cite:
 ```
-@article{DIAKOGIANNIS_ET_AL_2020,
-title = "Looking for change? Roll the Dice and demand Attention",
-year = "2020",
-url = "Will appear on arxiv Monday 07/Sept GMT00:00 - submit/3354061",
-author = "Foivos I. Diakogiannis and François Waldner and Peter Caccetta",
+@article{diakogiannis2020looking,
+    title={Looking for change? Roll the Dice and demand Attention},
+    author={Foivos I. Diakogiannis and François Waldner and Peter Caccetta},
+    year={2020},
+    eprint={2009.02062},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
