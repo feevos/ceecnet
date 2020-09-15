@@ -12,7 +12,7 @@ class Conv2DNormed(HybridBlock):
 
     def __init__(self,  channels, kernel_size, strides=(1, 1), 
                  padding=(0, 0), dilation=(1, 1),   activation=None, 
-                 weight_initializer=None,  in_channels=0, _norm_type = 'GroupNorm', norm_groups=None, axis =1 , groups=1, **kwards):
+                 weight_initializer=None,  in_channels=0, _norm_type = 'BatchNorm', norm_groups=None, axis =1 , groups=1, **kwards):
         super().__init__(**kwards)
 
         with self.name_scope():

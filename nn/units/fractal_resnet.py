@@ -9,7 +9,7 @@ class ResNet_v2_block(HybridBlock):
     ResNet v2 building block. It is built upon the assumption of ODD kernel 
     """
     def __init__(self, _nfilters,_kernel_size=(3,3),_dilation_rate=(1,1), 
-                 _norm_type='GroupNorm', norm_groups=None, ngroups=1, **kwards):
+                 _norm_type='BatchNorm', norm_groups=None, ngroups=1, **kwards):
         super().__init__(**kwards)
 
         self.nfilters = _nfilters
@@ -44,7 +44,7 @@ class ResNet_v2_block(HybridBlock):
         return x 
 
 class FracTALResNet_unit(HybridBlock):
-    def __init__(self, nfilters, ngroups=1, nheads=1, kernel_size=(3,3), dilation_rate=(1,1), norm_type = 'GroupNorm', norm_groups=None, ftdepth=5,**kwards):
+    def __init__(self, nfilters, ngroups=1, nheads=1, kernel_size=(3,3), dilation_rate=(1,1), norm_type = 'BatchNorm', norm_groups=None, ftdepth=5,**kwards):
         super().__init__()
 
         with self.name_scope():

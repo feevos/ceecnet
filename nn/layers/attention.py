@@ -6,7 +6,7 @@ from ceecnet.nn.layers.ftnmt import *
 
         
 class RelFTAttention2D(HybridBlock):
-    def __init__(self, nkeys, kernel_size=3, padding=1,nheads=1, norm = 'GroupNorm', norm_groups=None,ftdepth=5,**kwards):
+    def __init__(self, nkeys, kernel_size=3, padding=1,nheads=1, norm = 'BatchNorm', norm_groups=None,ftdepth=5,**kwards):
         super().__init__(**kwards)
 
         with self.name_scope():
@@ -43,7 +43,7 @@ class RelFTAttention2D(HybridBlock):
 
 
 class FTAttention2D(HybridBlock):
-    def __init__(self, nkeys, kernel_size=3, padding=1, nheads=1, norm = 'GroupNorm', norm_groups=None,ftdepth=5,**kwards):
+    def __init__(self, nkeys, kernel_size=3, padding=1, nheads=1, norm = 'BatchNorm', norm_groups=None,ftdepth=5,**kwards):
         super().__init__(**kwards)
         
         with self.name_scope():
