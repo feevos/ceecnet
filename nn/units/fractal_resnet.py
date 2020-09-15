@@ -49,8 +49,8 @@ class FracTALResNet_unit(HybridBlock):
 
         with self.name_scope():
             self.block1 = ResNet_v2_block(nfilters,kernel_size,dilation_rate,_norm_type = norm_type, norm_groups=norm_groups, ngroups=ngroups)
-            self.attn1 = FTAttention2D(nfilters=nfilters, nheads=nheads, kernel_size=kernel_size, norm = norm_type, norm_groups = norm_groups,ftdepth=ftdepth)
-            self.attn2 = FTAttention2D(nfilters=nfilters, nheads=nheads, kernel_size=kernel_size, norm = norm_type, norm_groups = norm_groups,ftdepth=ftdepth)
+            self.attn1 = FTAttention2D(nkeys=nfilters, nheads=nheads, kernel_size=kernel_size, norm = norm_type, norm_groups = norm_groups,ftdepth=ftdepth)
+            self.attn2 = FTAttention2D(nkeys=nfilters, nheads=nheads, kernel_size=kernel_size, norm = norm_type, norm_groups = norm_groups,ftdepth=ftdepth)
 
             self.gamma1  = self.params.get('gamma1', shape=(1,), init=mx.init.Zero())
             self.gamma2  = self.params.get('gamma2', shape=(1,), init=mx.init.Zero())
