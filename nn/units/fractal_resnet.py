@@ -45,7 +45,7 @@ class ResNet_v2_block(HybridBlock):
 
 class FracTALResNet_unit(HybridBlock):
     def __init__(self, nfilters, ngroups=1, nheads=1, kernel_size=(3,3), dilation_rate=(1,1), norm_type = 'BatchNorm', norm_groups=None, ftdepth=5,**kwards):
-        super().__init__()
+        super().__init__(**kwards)
 
         with self.name_scope():
             self.block1 = ResNet_v2_block(nfilters,kernel_size,dilation_rate,_norm_type = norm_type, norm_groups=norm_groups, ngroups=ngroups)
