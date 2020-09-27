@@ -4,7 +4,7 @@ We added a pure semantic segmentation model that uses CEECNetV1, CEECNetV2 or Fr
 # Looking for change? Roll the Dice and demand Attention
 ![mantis](images/img_3.png)
 
-Official [mxnet](https://mxnet.incubator.apache.org/) implementation of the paper: "Looking for change? Roll the Dice and demand Attention", Diakogiannis et al. (2020). This repository contains source code for implementing and training the mantis ceecnet/FracTAL ResNet as described in our manuscript. All models are built with the mxnet DL framework (version < 2.0), under the gluon api. We do not provide pre-trained weights. 
+Official [mxnet](https://mxnet.incubator.apache.org/) implementation of the paper: ["Looking for change? Roll the Dice and demand Attention"](https://arxiv.org/abs/2009.02062), Diakogiannis et al. (2020). This repository contains source code for implementing and training the mantis ceecnet/FracTAL ResNet as described in our manuscript. All models are built with the mxnet DL framework (version < 2.0), under the gluon api. We do not provide pre-trained weights. 
 
 Inference examples for the task of Building change detection for the model mantis ceecnetV1. From left to right, input image date 1, input image date 2, ground truth, inference, confidence heat map for the segmentation task. 
 ![mantis](images/img_1.png)
