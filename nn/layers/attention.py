@@ -11,9 +11,9 @@ class RelFTAttention2D(HybridBlock):
 
         with self.name_scope():
 
-            self.query  = Conv2DNormed(channels=nkeys,kernel_size= kernel_size, padding = padding, _norm_type= norm, norm_groups=norm_groups)
-            self.key    = Conv2DNormed(channels=nkeys,kernel_size= kernel_size, padding = padding, _norm_type= norm, norm_groups=norm_groups)
-            self.value  = Conv2DNormed(channels=nkeys,kernel_size= kernel_size, padding = padding, _norm_type= norm, norm_groups=norm_groups)
+            self.query  = Conv2DNormed(channels=nkeys,kernel_size= kernel_size, padding = padding, _norm_type= norm, norm_groups=norm_groups, groups=nheads)
+            self.key    = Conv2DNormed(channels=nkeys,kernel_size= kernel_size, padding = padding, _norm_type= norm, norm_groups=norm_groups, groups=nheads)
+            self.value  = Conv2DNormed(channels=nkeys,kernel_size= kernel_size, padding = padding, _norm_type= norm, norm_groups=norm_groups, groups=nheads)
 
             
             self.metric_channel = FTanimoto(depth=ftdepth, axis=[2,3])
@@ -47,7 +47,7 @@ class FTAttention2D(HybridBlock):
         super().__init__(**kwards)
         
         with self.name_scope():
-            self. att = RelFTAttention2D(nkeys=nkeys,kernel_size=kernel_size, padding=padding, nheads=nheads, norm = norm, norm_groups=norm_groups,ftdepth=ftdepth,**kwards)
+            self. att = RelFTAttention2D(nkeys=nkeys,kernel_size=kernel_size, padding=padding, nheads=nheads, norm = norm, norm_groups=norm_groups, ftdepth=ftdepth,**kwards)
 
 
     def hybrid_forward(self, F, input):
