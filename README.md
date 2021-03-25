@@ -10,7 +10,7 @@ Inference examples for the task of Building change detection for the model manti
 ![mantis](images/img_1.png)
 ![mantis](images/img_2.png)
 
-Inference examples for the task of Building change detection for the model mantis ceecnetV2 (ftdepth=5). Order of figures as above. 
+Inference examples for the task of Building change detection for the model mantis ceecnetV2 (ftdepth=5). Order of figures as above.  These are for the difficult tiles 21, 71, 72, 77, 80, 101 from the test set. 
 ![mantis](images/img_21.png)
 ![mantis](images/img_71.png)
 ![mantis](images/img_72.png)
