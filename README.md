@@ -4,7 +4,7 @@ We added a pure semantic segmentation model that uses CEECNetV1, CEECNetV2 or Fr
 # Looking for change? Roll the Dice and demand Attention
 ![mantis](images/img_3.png)
 
-Official [mxnet](https://mxnet.incubator.apache.org/) implementation of the paper: ["Looking for change? Roll the Dice and demand Attention"](https://arxiv.org/abs/2009.02062), Diakogiannis et al. (2020). This repository contains source code for implementing and training the mantis ceecnet/FracTAL ResNet as described in our manuscript. All models are built with the mxnet DL framework (version < 2.0), under the gluon api. We do not provide pre-trained weights. 
+Official [mxnet](https://mxnet.incubator.apache.org/) implementation of the paper: ["Looking for change? Roll the Dice and demand Attention" (arxiv version)](https://arxiv.org/abs/2009.02062), [Diakogiannis et al. (2020 - journal version)](https://www.mdpi.com/2072-4292/13/18/3707). This repository contains source code for implementing and training the mantis ceecnet/FracTAL ResNet as described in our manuscript. All models are built with the mxnet DL framework (version < 2.0), under the gluon api. We do not provide pre-trained weights. 
 
 Inference examples for the task of Building change detection for the model mantis ceecnetV1 (fractal Tanimoto loss tdepth, ftdepth=5). From left to right, input image date 1, input image date 2, ground truth, inference, confidence heat map for the segmentation task. 
 ![mantis](images/img_1.png)
@@ -63,12 +63,17 @@ or additional features available to CSIRO or the public in connection with your 
 ### CITATION
 If you find the contents of this repository useful for your research, please cite:
 ```
-@article{diakogiannis2020looking,
-    title={Looking for change? Roll the Dice and demand Attention},
-    author={Foivos I. Diakogiannis and François Waldner and Peter Caccetta},
-    year={2020},
-    eprint={2009.02062},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@Article{rs13183707,
+AUTHOR = {Diakogiannis, Foivos I. and Waldner, François and Caccetta, Peter},
+TITLE = {Looking for Change? Roll the Dice and Demand Attention},
+JOURNAL = {Remote Sensing},
+VOLUME = {13},
+YEAR = {2021},
+NUMBER = {18},
+ARTICLE-NUMBER = {3707},
+URL = {https://www.mdpi.com/2072-4292/13/18/3707},
+ISSN = {2072-4292},
+ABSTRACT = {Change detection, i.e., the identification per pixel of changes for some classes of interest from a set of bi-temporal co-registered images, is a fundamental task in the field of remote sensing. It remains challenging due to unrelated forms of change that appear at different times in input images. Here, we propose a deep learning framework for the task of semantic change detection in very high-resolution aerial images. Our framework consists of a new loss function, a new attention module, new feature extraction building blocks, and a new backbone architecture that is tailored for the task of semantic change detection. Specifically, we define a new form of set similarity that is based on an iterative evaluation of a variant of the Dice coefficient. We use this similarity metric to define a new loss function as well as a new, memory efficient, spatial and channel convolution Attention layer: the FracTAL. We introduce two new efficient self-contained feature extraction convolution units: the CEECNet and FracTALResNet units. Further, we propose a new encoder/decoder scheme, a network macro-topology, that is tailored for the task of change detection. The key insight in our approach is to facilitate the use of relative attention between two convolution layers in order to fuse them. We validate our approach by showing excellent performance and achieving state-of-the-art scores (F1 and Intersection over Union-hereafter IoU) on two building change detection datasets, namely, the LEVIRCD (F1: 0.918, IoU: 0.848) and the WHU (F1: 0.938, IoU: 0.882) datasets.},
+DOI = {10.3390/rs13183707}
 }
 ```
